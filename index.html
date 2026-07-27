@@ -23,19 +23,10 @@
     .nav-cta { background:var(--navy);color:white!important;padding:10px 22px;border-radius:3px;font-size:12px!important;font-weight:600!important;letter-spacing:0.06em!important; }
     .nav-cta:hover { background:var(--navy-dark)!important; }
 
-    /* HERO GALLERY */
-    .hero-gallery { margin-top:80px;display:grid;grid-template-columns:1.5fr 1fr;grid-template-rows:320px 220px;gap:3px;background:#eee; }
-    .hg-main { grid-row:span 2;overflow:hidden; }
-    .hg-main img,.hg-side img { width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.6s; }
-    .hg-main:hover img,.hg-side:hover img { transform:scale(1.03); }
-    .hg-side { overflow:hidden; }
-    .hg-cta { background:var(--navy);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;cursor:pointer;text-decoration:none; }
-    .hg-cta span { color:white;font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase; }
-    .hg-cta small { color:rgba(255,255,255,0.5);font-size:11px;letter-spacing:0.05em; }
 
-    /* HERO TEXT */
-    .hero { padding:5rem 3rem 4rem;border-bottom:1px solid var(--light); }
-    .hero-inner { max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:end; }
+
+    .hero { margin-top:80px;padding:5rem 3rem 4rem;border-bottom:1px solid var(--light); }
+    .hero-inner { max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center; }
     h1 { font-family:'Cormorant Garamond',serif;font-size:clamp(3.5rem,7vw,6rem);font-weight:500;color:var(--text);line-height:0.95;letter-spacing:-2px; }
     h1 em { font-style:italic;color:var(--navy); }
     .hero-right p { font-size:15px;color:var(--gray);line-height:1.8;margin-bottom:2rem; }
@@ -47,6 +38,13 @@
     .btn-navy:hover { background:var(--navy-dark); }
     .btn-outline { border:1px solid var(--light);color:var(--text);padding:14px 30px;border-radius:3px;font-size:12px;font-weight:500;text-decoration:none;letter-spacing:0.06em;transition:border-color 0.2s; }
     .btn-outline:hover { border-color:var(--navy);color:var(--navy); }
+
+    /* HERO INTERIOR GALLERY */
+    .hero-gallery-grid { display:grid;grid-template-columns:1fr 1fr;grid-template-rows:200px 200px;gap:4px; }
+    .hg-item { overflow:hidden;border-radius:2px; }
+    .hg-item img { width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.6s cubic-bezier(0.4,0,0.2,1); }
+    .hg-item:hover img { transform:scale(1.05); }
+    .hg-item.tall { grid-row:span 2; }
 
     /* TICKER */
     .ticker { background:var(--navy);color:white;padding:12px 0;overflow:hidden;white-space:nowrap; }
@@ -146,8 +144,7 @@
 
     @media (max-width:900px) {
       nav { padding:1rem 1.5rem; } .nav-links { display:none; }
-      .hero-gallery { grid-template-columns:1fr;grid-template-rows:260px 160px 120px; }
-      .hg-main { grid-row:span 1; }
+
       .hero { padding:3rem 1.5rem 3rem; } .hero-inner { grid-template-columns:1fr;gap:2rem; }
       h1 { font-size:3.5rem; }
       .hero-stats { gap:1.5rem; }
@@ -183,11 +180,6 @@
   </div>
 </nav>
 
-<!-- HERO GALLERY -->
-<div class="hero-gallery">
-  <div class="hg-main">
-    <img src="fontana-exterior.jpg" alt="2442 Fontana Dr — ARP Residential" style="height:100%;">
-  </div>
   <div class="hg-side">
     <img src="fontana-kitchen1.jpg" alt="Gourmet Kitchen" style="height:100%;">
   </div>
@@ -202,6 +194,7 @@
   <div class="hero-inner">
     <div>
       <h1>Dream.<br><em>Design.</em><br>Build.</h1>
+      <p style="font-size:15px;color:var(--gray);line-height:1.8;margin-top:1.5rem;max-width:420px;">Top-rated construction company in Chicagoland. We build homes with uncompromising craftsmanship and a personal touch — transforming your vision into reality since 1999.</p>
       <div class="hero-stats">
         <div><div class="stat-num">25+</div><div class="stat-lbl">Years Experience</div></div>
         <div><div class="stat-num">$1.8M+</div><div class="stat-lbl">Avg Home Value</div></div>
@@ -209,9 +202,19 @@
         <div><div class="stat-num">100%</div><div class="stat-lbl">Custom Built</div></div>
       </div>
     </div>
-    <div class="hero-right">
-      <p>Top-rated construction company in Chicagoland. We build homes with uncompromising craftsmanship, premium materials, and a personal touch — transforming your vision into reality since 1999.</p>
-      <div class="hero-actions">
+    <div>
+      <div class="hero-gallery-grid">
+        <div class="hg-item tall">
+          <img src="fontana-kitchen1.jpg" alt="Gourmet Kitchen">
+        </div>
+        <div class="hg-item">
+          <img src="fontana-shower.jpg" alt="Master Shower">
+        </div>
+        <div class="hg-item">
+          <img src="fontana-bath1.jpg" alt="Bathroom">
+        </div>
+      </div>
+      <div style="display:flex;gap:1rem;margin-top:1.25rem;flex-wrap:wrap;">
         <a href="#projects" class="btn-navy">View Projects</a>
         <a href="#contact" class="btn-outline">Get In Touch</a>
       </div>
