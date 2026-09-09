@@ -90,7 +90,7 @@
     .brands-section { padding:6rem 2rem; }
     .brands-inner { max-width:1200px;margin:0 auto; }
     .brands-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--light);border:1px solid var(--light);margin-top:3rem; }
-    .brand-item { background:var(--white);padding:2.5rem 2rem; }
+    .brand-item { background:var(--white);padding:2.5rem 2rem;min-width:0;overflow-wrap:break-word; }
     .brand-num { font-family:'Cormorant Garamond',serif;font-size:2.5rem;color:var(--navy);opacity:0.15;line-height:1;margin-bottom:1rem;font-weight:500; }
     .brand-name { font-size:13px;font-weight:700;color:var(--text);margin-bottom:0.5rem;letter-spacing:0.05em;text-transform:uppercase; }
     .brand-desc { font-size:13px;color:var(--gray);line-height:1.7; }
@@ -146,8 +146,9 @@
       nav { padding:1rem 1.5rem; } .nav-links { display:none; }
 
       .hero { padding:3rem 1.5rem 3rem; } .hero-inner { grid-template-columns:1fr;gap:2rem; }
+      .hero-inner > * { min-width:0; }
       h1 { font-size:3.5rem; }
-      .hero-stats { gap:1.5rem; }
+      .hero-stats { gap:1.5rem 2rem;flex-wrap:wrap; }
       .projects-featured { grid-template-columns:1fr; }
       .projects-row { grid-template-columns:1fr 1fr; }
       .fontana-grid { grid-template-columns:1fr 1fr;grid-template-rows:auto; }
@@ -160,6 +161,11 @@
       .contact-inner { grid-template-columns:1fr;gap:3rem; }
       .form-row { grid-template-columns:1fr; }
       footer { flex-direction:column;text-align:center;padding:2rem 1.5rem; }
+    }
+
+    @media (max-width:400px) {
+      .brands-section { padding:4rem 1.25rem; }
+      .brand-item { padding:2rem 1.25rem; }
     }
   </style>
 </head>
