@@ -78,6 +78,18 @@
     .project-specs { font-size:11px;color:rgba(255,255,255,0.5);margin-top:4px; }
 
     /* FONTANA GALLERY */
+    .forsale-section { background:var(--off);padding:6rem 0;border-bottom:1px solid var(--light); }
+    .forsale-inner { max-width:1200px;margin:0 auto;padding:0 2rem; }
+    .forsale-head { display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;flex-wrap:wrap; }
+    .status-available { background:rgba(27,43,107,0.92);color:white; }
+    .forsale-facts { display:flex;gap:2.5rem;flex-wrap:wrap;margin-top:1.75rem;padding-top:1.5rem;border-top:1px solid var(--light); }
+    .fact-num { font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:var(--text);line-height:1; }
+    .fact-lbl { font-size:11px;color:var(--gray);letter-spacing:0.1em;text-transform:uppercase;margin-top:5px; }
+    .forsale-grid { display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:260px 260px 260px;gap:3px;margin-top:2.5rem; }
+    .fs1 { grid-column:span 2;grid-row:span 2; }
+    .fs-item { overflow:hidden; }
+    .fs-item img { width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s; }
+    .fs-item:hover img { transform:scale(1.04); }
     .fontana-section { background:var(--off);padding:6rem 0; }
     .fontana-inner { max-width:1200px;margin:0 auto;padding:0 2rem; }
     .fontana-grid { display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:260px 260px;gap:3px;margin-top:2rem; }
@@ -153,6 +165,12 @@
       .projects-row { grid-template-columns:1fr 1fr; }
       .fontana-grid { grid-template-columns:1fr 1fr;grid-template-rows:auto; }
       .fg1 { grid-column:span 2;grid-row:span 1; }
+      .forsale-section { padding:4rem 0; }
+      .forsale-inner { padding:0 1.5rem; }
+      .forsale-facts { gap:1.5rem 2rem; }
+      .forsale-grid { grid-template-columns:1fr 1fr;grid-template-rows:auto;margin-top:2rem; }
+      .fs-item { height:190px; }
+      .fs1 { grid-column:span 2;grid-row:span 1;height:240px; }
       .brands-grid { grid-template-columns:1fr 1fr; }
       .gallery-grid { grid-template-columns:1fr 1fr;grid-template-rows:auto; }
       .g1,.g2,.g3,.g4,.g5 { grid-column:span 1; }
@@ -177,6 +195,7 @@
     <div class="logo-text" style="display:none;">ARP Residential</div>
   </div>
   <div class="nav-links">
+    <a href="#for-sale">For Sale</a>
     <a href="#projects">Projects</a>
     <a href="#craftsmanship">Craftsmanship</a>
     <a href="#about">About</a>
@@ -235,6 +254,49 @@
     <span class="ticker-item">Custom Cabinetry</span><span class="ticker-dot">·</span>
     <span class="ticker-item">Porcelain Tile</span><span class="ticker-dot">·</span>
     <span class="ticker-item">Glenview · Northfield · Chicagoland</span><span class="ticker-dot">·</span>
+  </div>
+</div>
+
+<!-- CURRENT HOME FOR SALE -->
+<div class="forsale-section" id="for-sale">
+  <div class="forsale-inner">
+    <div class="forsale-head">
+      <div>
+        <div class="eyebrow">Now Available</div>
+        <h2>Current Home For Sale</h2>
+        <p style="font-size:15px;color:var(--gray);line-height:1.8;margin-top:0.75rem;max-width:620px;">
+          <strong style="color:var(--text);">310 Nottingham Ave.</strong> — Newly built and move-in ready. White oak
+          hardwood throughout, custom cabinetry with a quartz island and Wolf range, a primary suite with a soaking tub
+          and marble bath, second-floor laundry, and a finished lower level with a wet bar opening to a fenced yard and
+          covered patio.
+        </p>
+      </div>
+      <a href="#contact" class="view-all">Schedule a Showing</a>
+    </div>
+
+    <div class="forsale-facts">
+      <div><div class="fact-num">5</div><div class="fact-lbl">Bedrooms</div></div>
+      <div><div class="fact-num">5</div><div class="fact-lbl">Full Baths</div></div>
+      <div><div class="fact-num">4,848</div><div class="fact-lbl">Square Feet</div></div>
+      <div><div class="fact-num">2-Car</div><div class="fact-lbl">Attached Garage</div></div>
+      <div><div class="fact-num">2025</div><div class="fact-lbl">Newly Built</div></div>
+    </div>
+
+    <div class="forsale-grid">
+      <div class="fs-item fs1"><img src="nottingham-exterior.webp" alt="310 Nottingham Ave. front exterior" loading="lazy"></div>
+      <div class="fs-item"><img src="nottingham-kitchen.webp" alt="Kitchen with quartz island" loading="lazy"></div>
+      <div class="fs-item"><img src="nottingham-range.webp" alt="Wolf range and custom hood" loading="lazy"></div>
+      <div class="fs-item"><img src="nottingham-living.webp" alt="Open living and dining" loading="lazy"></div>
+      <div class="fs-item"><img src="nottingham-family.webp" alt="Family room fireplace" loading="lazy"></div>
+      <div class="fs-item"><img src="nottingham-primary-bath.webp" alt="Primary bath with soaking tub" loading="lazy"></div>
+      <div class="fs-item"><img src="nottingham-patio.webp" alt="Covered patio and fenced yard" loading="lazy"></div>
+      <div class="fs-item"><img src="nottingham-lower.webp" alt="Finished lower level with wet bar" loading="lazy"></div>
+      <div class="fs-item"><img src="nottingham-rear.webp" alt="Rear elevation and covered patio" loading="lazy"></div>
+    </div>
+
+    <div style="margin-top:2rem;">
+      <a href="#contact" style="display:inline-block;background:var(--navy);color:white;padding:14px 30px;border-radius:3px;font-size:12px;font-weight:700;text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;">Request Details</a>
+    </div>
   </div>
 </div>
 
